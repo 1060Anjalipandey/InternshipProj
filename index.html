@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+      body {
+        line-height: 1.6;
+        margin: 2em;
+        min-width: 990px;
+    }
+    
+    th {
+        background-color: brown;
+        color: #fff;
+        padding: 0.5em 1em;
+    }
+    
+    td {
+        border-top: 1px solid #eee;
+        padding: 0.5em 1em;
+    }
+    
+    input {
+        cursor: pointer;
+    }
+    
+    
+    th.missed-col {
+        background-color: F1F7B5;
+    }
+    
+    td.missed-col {
+        background-color:#D5CEA3;
+        color: black;
+        text-align: center;
+    }
+    
+    .name-col {
+        text-align: left;
+    }
+    
+    </style>
+    <body>
+      <h2>iPage</h2>
+      <table id="table">
+        <thead>
+          <tr>
+            <th class="name-col">Student Name</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th class="missed-col">Days Missed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="student">
+            <td class="name-col">Khushi</td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="missed-col">0</td>
+          </tr>
+          <tr class="student">
+            <td class="name-col">Anjali</td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="missed-col">0</td>
+          </tr>
+          <tr class="student">
+            <td class="name-col">John</td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="missed-col">0</td>
+          </tr>
+          <tr class="student">
+            <td class="name-col">Nikhil</td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="missed-col">0</td>
+          </tr>
+          <tr class="student">
+            <td class="name-col">Clara</td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="attend-col"><input type="checkbox"></td>
+            <td class="missed-col">0</td>
+          </tr>
+          <tr>
+            <td class="grandTotal">Total</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="valuesoftotal" class="missed-col"></td>
+          </tr>
+        </tbody>
+      </table>
+    </body>
+    <script>
+      (function() {
+        if (!localStorage.attendance) {
+            console.log('Creating attendance records...');
+            function getRandom() {
+                return (Math.random() >= 0.5);
+            }
+    
+            var nameColumns = $('tbody .name-col'),
+                attendance = {};
+    
+            nameColumns.each(function() {
+                var name = this.innerText;
+                attendance[name] = [];
+    
+                for (var i = 0; i <= 11; i++) {
+                    attendance[name].push(getRandom());
+                }
+            });
+    
+            localStorage.attendance = JSON.stringify(attendance);
+        }
+    }());
+    
+    
+    
+    $(function() {
+        var attendance = JSON.parse(localStorage.attendance),
+            $allMissed = $('tbody .missed-col'),
+            $allCheckboxes = $('tbody input');
+    
+        
+        function countMissing() {
+            $allMissed.each(function() {
+                var studentRow = $(this).parent('tr'),
+                    dayChecks = $(studentRow).children('td').children('input'),
+                    numMissed = 0;
+    
+                dayChecks.each(function() {
+                    if (!$(this).prop('checked')) {
+                        numMissed++;
+                    }
+                });
+    
+                $(this).text(numMissed);
+            });
+        }
+    
+        
+        $.each(attendance, function(name, days) {
+            var studentRow = $('tbody .name-col:contains("' + name + '")').parent('tr'),
+                dayChecks = $(studentRow).children('.attend-col').children('input');
+    
+            dayChecks.each(function(i) {
+                $(this).prop('checked', days[i]);
+            });
+        });
+    
+        
+        $allCheckboxes.on('click', function() {
+            var studentRows = $('tbody .student'),
+                newAttendance = {};
+    
+            studentRows.each(function() {
+                var name = $(this).children('.name-col').text(),
+                    $allCheckboxes = $(this).children('td').children('input');
+    
+                newAttendance[name] = [];
+    
+                $allCheckboxes.each(function() {
+                    newAttendance[name].push($(this).prop('checked'));
+                });
+            });
+    
+            countMissing();
+            localStorage.attendance = JSON.stringify(newAttendance);
+        });
+    
+        countMissing();
+    }());
+    var grandTotal=document.getElementsByClassName("grandTotal");
+    var total=document.getElementsByClassName("missed-col");
+    var sum=0;
+    for (var i = 0; i < total.length; i++){
+        if(total[i].className == "missed-col"){
+            sum += isNaN(total[i].innerHTML) ? 0 : parseInt(total[i].innerHTML);
+        }
+    }
+    document.getElementById('valuesoftotal').innerHTML = sum;
+
+    </script>
+</html>
